@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="eparser",
-    version="0.0.1",
+    version="0.1.1",
     author="Yanbo Zhang",
     author_email="Zhang.Yanbo@asu.edu",
     description="Package for extracting certain plots",
@@ -20,7 +20,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"eparser": "eparser"},
-    packages=['Macro'],
+    package_dir={"eparser": "eparser", 'reader':'eparser/reader'},
+    packages=['eparser', 'reader'],
     python_requires=">=3.6",
 )
