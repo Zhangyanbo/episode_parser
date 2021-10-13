@@ -26,7 +26,11 @@ def get_contents(html):
     return contents
 
 def get_series(html):
-    return {title:content for title, content in zip(get_titles(html), get_contents(html))}
+    try:
+        series = {title:content for title, content in zip(get_titles(html), get_contents(html))}
+    except:
+        raise ValueError('No content found!')
+    return series
 
 def clean_string(s):
     s = s.replace('\u3000', '')
